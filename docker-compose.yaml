@@ -1,0 +1,12 @@
+version: "3"
+services:
+  crp:
+    image: crp
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+  redis:
+    image: redis/redis-stack-server:latest
+    ports:
+      - "6379:6379"
